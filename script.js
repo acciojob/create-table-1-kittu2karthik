@@ -1,10 +1,7 @@
 function insert_Row() {
     //Write your code here
-	const html = `
-		<tr><td>New Cell1</td> 
-		<td>New Cell2</td></tr> 
-	`
-
-		const table = document.querySelector('#sampleTable');
-		table.insertAdjacentHTML('afterbegin', html);
+	const table = document.querySelector('#sampleTable');
+    const row = table.insertRow(0);
+    row.insertCell(0).innerText = 'New Cell1';
+    row.insertCell(1).innerText = 'New Cell2';
 }
